@@ -79,7 +79,6 @@ export default class TextField extends PureComponent {
       input: PropTypes.number,
       left: PropTypes.number,
       right: PropTypes.number,
-      bottom: PropTypes.number,
     }),
 
     labelOffset: Label.propTypes.offset,
@@ -117,8 +116,8 @@ export default class TextField extends PureComponent {
     prefix: PropTypes.string,
     suffix: PropTypes.string,
 
-    containerStyle: (ViewPropTypes || View.propTypes).style,
-    inputContainerStyle: (ViewPropTypes || View.propTypes).style,
+    containerStyle: (PropTypes || View.propTypes).object,
+    inputContainerStyle: (PropTypes || View.propTypes).object,
   };
 
   static inputContainerStyle = styles.inputContainer;
@@ -129,7 +128,6 @@ export default class TextField extends PureComponent {
     input: 8,
     left: 0,
     right: 0,
-    bottom: 8,
   };
 
   static labelOffset = {
@@ -411,7 +409,7 @@ export default class TextField extends PureComponent {
     this.setState({
       height: Math.max(
         fontSize * 1.5,
-        Math.ceil(height) + Platform.select({ ios: 4, android: 1 })
+        Math.ceil(height) + Platform.select({ harmony:4,ios: 4, android: 1 })
       ),
     });
   }
@@ -475,14 +473,13 @@ export default class TextField extends PureComponent {
     let style = {
       fontSize,
       color,
-
       height: this.inputHeight(),
     };
 
     if (multiline) {
-      let lineHeight = fontSize * 1.5;
-      let offset = 'ios' === Platform.OS? 2 : 0;
-
+      let lineHeight = fontSize;
+      let offset = ('ios' === Platform.OS || 'harmony' === Platform.OS)? 2 : 0;
+  
       style.height += lineHeight;
       style.transform = [{
         translateY: lineHeight + offset,
@@ -572,7 +569,6 @@ export default class TextField extends PureComponent {
     let containerStyle =  {
       paddingLeft: contentInset.left,
       paddingRight: contentInset.right,
-      minHeight: contentInset.bottom,
     };
 
     let styleProps = {

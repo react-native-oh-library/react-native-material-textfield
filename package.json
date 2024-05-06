@@ -1,6 +1,6 @@
 {
-  "name": "react-native-material-textfield",
-  "version": "0.16.1",
+  "name": "@react-native-oh-tpl/react-native-material-textfield",
+  "version": "0.16.1-0.0.1",
   "license": "BSD-3-Clause",
   "author": "Alexander Nazarov <n4kz@n4kz.com>",
 
@@ -19,7 +19,9 @@
     "floating",
     "label"
   ],
-
+  "harmony":{
+    "alias":"react-native-material-textfield"
+   },
   "main": "index.js",
   "files": ["index.js", "src/*", "license.txt", "readme.md", "changelog.md"],
 
@@ -34,7 +36,8 @@
 
   "peerDependencies": {
     "react": ">=16.3.0",
-    "react-native": ">=0.55.0"
+    "react-native": ">=0.55.0",
+	"react-native-material-textfield": "0.16.1"
   },
 
   "devDependencies": {
