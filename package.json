@@ -31,13 +31,13 @@
   },
 
   "dependencies": {
-    "prop-types": "^15.5.9"
+    "prop-types": "^15.5.9",
+    "react-native-material-textfield": "0.16.1"
   },
 
   "peerDependencies": {
     "react": ">=16.3.0",
-    "react-native": ">=0.55.0",
-	"react-native-material-textfield": "0.16.1"
+    "react-native": ">=0.55.0"
   },
 
   "devDependencies": {
