@@ -286,6 +286,13 @@ export default class TextField extends PureComponent {
     this.onChangeText('');
   }
 
+  shouldComponentUpdate(nextProps) {
+    if(this.props.value !== nextProps.value) {
+      this.onChangeText(nextProps.value);
+    }
+    return true
+  }
+
   value() {
     let { text } = this.state;
     let { defaultValue } = this.props;
