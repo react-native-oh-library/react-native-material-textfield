@@ -1,0 +1,11 @@
+[
+    {
+        "Name": "react-native-material-textfield",
+        "License": "BSD License",
+        "License File": "https://github.com/n4kz/react-native-material-textfield/blob/master/license.txt",
+        "Version Number": "0.16.1",
+        "Owner" : "xiafeng@huawei.com",
+        "Upstream URL": "https://github.com/n4kz/react-native-material-textfield",
+        "Description": "Material textfield"
+    }
+]
