@@ -1,6 +1,6 @@
 # @react-native-oh-tpl/react-native-material-textfield
 
-This project is based on [react-native-material-textfield](https://github.com/christopherdro/react-native-print)
+This project is based on [react-native-material-textfield v0.16.1](https://github.com/n4kz/react-native-material-textfield/releases/tag/0.16.1)
 
 ## Documentation
 
